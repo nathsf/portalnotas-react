@@ -1,0 +1,89 @@
+$primary-color:#231F1F;
+$white: #fff;
+
+//react 
+
+ .logotext {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    opacity: 1;
+    z-index: 1000;
+    background-color: $primary-color;
+    border-bottom: 1px dashed #898989;
+    margin-bottom: 2em;
+    img.logo-side {
+        width: auto;
+    max-width: 108px;
+    }
+    .closemenu {
+        color: white;
+        svg {
+            margin: auto;
+        }
+      }
+  }
+
+  .sidebar {
+    background-color:$primary-color;
+    color:$white;
+    width:280px;
+    height: 100vh;
+    padding:0 1rem;
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 1003;
+    height: 100vh;
+    .sidebar-inner {
+        background-color:$primary-color;
+        color:$white;
+      }
+      .menu-item.active{
+        .menu-anchor {
+            background-color: #332f2f;
+            border-radius: 5px;
+            color: var(--upch-secondary);
+        }
+      }
+      .menu-item {
+        margin: 0.5em 0;
+        .menu-anchor {
+            padding-right: 0; 
+            padding-left: 0;
+            height: 45px;
+            &:hover {
+                background-color: #332f2f;
+                border-radius: 5px;
+                color: var(--upch-secondary);
+                .menu-icon {
+                    animation: swing ease-in-out 0.5s 1 alternate;
+                }
+            }
+            .menu-icon {
+                min-width: 47px;
+                margin-right: 0!important;
+                svg {
+                    width: 1.2em;
+                    height: 1.2em;
+                }
+            }
+        }
+      }
+    
+    .menu-label {
+        text-align: left;
+        color: white;
+      }
+      .menu-footer {
+        position: absolute;
+        bottom: 0;
+      }
+  }
+
+  
+ 
+
+  
+
