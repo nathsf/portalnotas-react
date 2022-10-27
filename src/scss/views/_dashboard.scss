@@ -1,12 +1,14 @@
+$bg-banner: #e3e3e3;
+
 .home .banner {
-    background: #231f1f;
-    color: white;
+    background: $bg-banner;
+    color: #231f1f;
     min-height: 75px;
     display: flex;
     align-items: center;
     margin-bottom: 1.2rem;
-    border-left: 2px solid var(--upch-secondary);
-    width:100%;
+    border-left: 3px solid var(--upch-secondary);
+    width: 100%;
     @media (max-width:767px) {
         min-height: 165px;
     }
@@ -30,6 +32,30 @@
             .d-flex {
                 display: block!important;
             }
+        }
+        .rs-picker {
+            border-left: 1px solid #dfdfdf;
+            svg {
+                color: var(--upch-primary);
+            }
+        }
+        .rs-picker-default .rs-picker-toggle.rs-btn {
+            border: 0 !important;
+            outline: 0;
+            box-shadow: none;
+            min-width: 189px;
+
+        }
+        input{
+            padding-left: 16px;
+        }
+        .rs-picker-has-value .rs-btn .rs-picker-toggle-value, .rs-picker-has-value .rs-picker-toggle .rs-picker-toggle-value {
+            color: #231f1f;
+            color: #231f1f;
+        }
+        .form-select {
+            font-size: 14px;
+            color: #8e8e93;
         }
         form {
             background: white;
@@ -159,7 +185,7 @@
   
 
   
-  .container-image:hover .image {
+  .container-image:hover img {
     opacity: 0.3;
   }
   

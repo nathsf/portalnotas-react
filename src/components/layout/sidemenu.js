@@ -1,20 +1,22 @@
 import React, { useState } from "react";
-
+import { useRef } from "react";
+import {
+  Link
+} from "react-router-dom";
 //import react pro sidebar components
 import {
-ProSidebarProvider,
+  ProSidebarProvider,
   Menu,
   MenuItem,
   Sidebar,
 } from "react-pro-sidebar";
+import OutsideClick from "./outsideClick";
 
 //import icons from react icons
 // import { FaList, FaRegHeart } from "react-icons/fa";
 import {
   FiHome,
   FiLogOut,
-
-  
 } from "react-icons/fi";
 import logo from '../../assets/img/logo-blanco.png'
 
@@ -23,6 +25,17 @@ import { BiChevronsRight, BiChevronsLeft, BiCog } from "react-icons/bi";
 import "./header.css";
 
 const SideHeader = () => {
+  const [activePage, setActivePage] = useState(null);
+
+  function handleActive(event) {
+    if (!event.target.classList.value.includes("active")) {
+      event.target.classList.toggle('active');
+      if (activePage)
+        activePage.classList.remove("active");
+      setActivePage(event.target);
+    }
+  }
+
   //create initial menuCollapse state using useState hook
   const [menuCollapse, setMenuCollapse] = useState(true);
 
@@ -31,7 +44,10 @@ const SideHeader = () => {
     //condition checking to change state from true to false and vice versa
     menuCollapse ? setMenuCollapse(false) : setMenuCollapse(true);
   };
+  // const outsideClick = setMenuCollapse(false);
 
+  const boxRef = useRef(null);
+  const boxOutsideClick = OutsideClick(boxRef);
 
 
   return (
@@ -39,28 +55,31 @@ const SideHeader = () => {
       <div id="header" bg="dark" variant="dark">
         {/* collapsed props to change menu size using menucollapse state */}
         <ProSidebarProvider >
-          <Sidebar collapsed={menuCollapse} >
+          <Sidebar collapsed={menuCollapse} ref={boxRef} >
+            {boxOutsideClick ? " " : " "}
             <div className="logotext">
               {/* small and big change using menucollapse state */}
-              {/* <div>{menuCollapse ? " " : "Portal de Notas"}</div> */}
-              <img src={menuCollapse ? " " : logo } className="logo-side"  />
+              <img src={menuCollapse ? " " : logo} className="logo-side" />
               <div className="closemenu" onClick={menuIconClick}>
-              {/* changing menu collapse icon on click */}
-              {menuCollapse ? <BiChevronsRight /> : <BiChevronsLeft />}
+                {/* changing menu collapse icon on click */}
+                {menuCollapse ? <BiChevronsRight /> : <BiChevronsLeft />}
+              </div>
             </div>
-            </div>
-           
-          
+
+
             <Menu iconShape="square">
-              <MenuItem active={true} icon={<FiHome />}>
-                Inicio
-              </MenuItem>
-              
-              <MenuItem icon={<RiPencilLine />}>Registro de Notas</MenuItem>
-              
+              <Link to="/dashboard" className="text-white" onClick={handleActive}>
+                <MenuItem active={window.location.pathname === "/dashboard"} icon={<FiHome />}>
+                  Home
+                </MenuItem>
+              </Link>
+              <Link to="/notas" className="text-white" onClick={handleActive}>
+                <MenuItem active={window.location.pathname === "/notas"} icon={<RiPencilLine />}>Registro de Notas</MenuItem>
+              </Link>
+
             </Menu>
             <Menu iconShape="square" className="menu-footer">
-                <MenuItem icon={<BiCog />}>Ajustes</MenuItem>
+              <MenuItem icon={<BiCog />}>Ajustes</MenuItem>
               <MenuItem icon={<FiLogOut />}>Cerrar sesión</MenuItem>
             </Menu>
           </Sidebar>
@@ -71,6 +90,9 @@ const SideHeader = () => {
           </SidebarFooter> */}
         </ProSidebarProvider>
       </div>
+      {/* <div className="desc">
+        {boxOutsideClick ? "outside click" : "inside click"}
+      </div> */}
     </>
   );
 };

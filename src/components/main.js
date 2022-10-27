@@ -1,13 +1,13 @@
 import React from "react";
-import Dashboard from './views/Dashboard'
+import Dashboard from './views/dashboard/Dashboard'
 import Footer from "./layout/footer";
 export default function Main() {
     return (
       <>
 
-        <div className="main pt-3" >
+        <div className="main home" >
           <div className="wrapper-height">
-          <Dashboard></Dashboard>
+          {/* <Dashboard></Dashboard> */}
           </div>
                    
                    <Footer></Footer>

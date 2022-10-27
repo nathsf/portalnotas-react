@@ -8,27 +8,29 @@ import EventsItem from './components/EventsItem';
 import Banner from "./components/Banner";
 import Calendar from "./components/Calendar";
 import CarouselBanner from "./components/CarouselBanner";
+
 export default function Dashboard() {
     return (
 
            <>
            <Banner></Banner>
-            <Container className="home pe-0">
+            <Container className=" pe-0">
                 <Row>
                     <Col  xs={12} md={8}>
                     <Card style={{ width: '100%' }} className="text-start">
-                    
+                    <Card.Header><Card.Title>Mis anuncios y avisos</Card.Title></Card.Header>
+
                     <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
+                        
                         <CarouselBanner/>
                     </Card.Body>
                     </Card>
                     </Col>
                     <Col xs={12} md={4} className="mb-2">
                     <Card style={{ width: '100%' }} className="text-start">
-              
+                    <Card.Header><Card.Title>Accesos rápidos</Card.Title></Card.Header>
                     <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
+                        
                         <div className="d-flex accesos">
                                     <div className="w-50">
                                         <div className="acceso-1">
@@ -98,9 +100,11 @@ export default function Dashboard() {
                 <Row>
                     <Col  xs={12} md={8}>
                     <Card style={{ width: '100%' }} className="text-start">
-                  
+                    <Card.Header>
+                    <Card.Title>Mi calendario</Card.Title>
+                    </Card.Header>
                     <Card.Body>
-                        <Card.Title>Mi calendario</Card.Title>
+                        
                         <Calendar></Calendar>
                      
                     </Card.Body>
@@ -108,9 +112,11 @@ export default function Dashboard() {
                     </Col>
                     <Col xs={12} md={4}>
                         <Card style={{ width: '100%' }} className="text-start">
+                        <Card.Header>
+                    <Card.Title>Mis pendientes</Card.Title>
+                    </Card.Header>
                         <Card.Body>
-                            <Card.Title> <h5>Mis pendientes
-                                </h5></Card.Title>
+                            
                                     <EventsItem/>
                                     <EventsItem/>
                                     <EventsItem/>

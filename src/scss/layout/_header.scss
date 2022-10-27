@@ -366,7 +366,10 @@ button.change-btn {
 }
 
 //react
-
+nav.navbar {
+    width: calc(100vw - 80px);
+    margin-left: 79px;
+}
 .logo {
     width: 120px;
 }

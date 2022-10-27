@@ -15,6 +15,9 @@ p, label, a , select, input, span, button, small{
     font-weight: 300;
     
 }
+p + p {
+    margin-top: 0;
+}
 .text-info {
     color: var(--upch-blue)!important;
 }
@@ -64,7 +67,13 @@ a {
 .main {
     height: calc(100vh - 65px);
     overflow-y: scroll;
+    width: calc(100vw - 80px);
+    margin-left: 79px;
     .wrapper-height {
         min-height: 100vh
+    }
+    @media (max-width: 1200px) {
+        width: calc(100vw - 80px);
+        margin-left: 79px;
     }
 }
