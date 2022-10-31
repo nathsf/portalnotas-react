@@ -2,7 +2,7 @@ import React from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+
 import Card from 'react-bootstrap/Card';
 import EventsItem from './components/EventsItem';
 import Banner from "./components/Banner";
@@ -11,7 +11,6 @@ import CarouselBanner from "./components/CarouselBanner";
 
 export default function Dashboard() {
     return (
-
            <>
            <Banner></Banner>
             <Container className=" pe-0">

@@ -12,8 +12,6 @@ import {
 } from "react-pro-sidebar";
 import OutsideClick from "./outsideClick";
 
-//import icons from react icons
-// import { FaList, FaRegHeart } from "react-icons/fa";
 import {
   FiHome,
   FiLogOut,
@@ -69,7 +67,7 @@ const SideHeader = () => {
 
             <Menu iconShape="square">
               <Link to="/dashboard" className="text-white" onClick={handleActive}>
-                <MenuItem active={window.location.pathname === "/dashboard"} icon={<FiHome />}>
+                <MenuItem active={window.location.pathname === "/dashboard" || window.location.pathname === "/"  } icon={<FiHome />}>
                   Home
                 </MenuItem>
               </Link>

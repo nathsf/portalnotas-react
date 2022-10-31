@@ -10,7 +10,7 @@ import SideHeader from './components/layout/sidemenu';
 import NavBar from './components/layout/header';
 // import Main from './components/main.js';
 import React, { useEffect } from 'react';
-import Dashboard from './components/views/dashboard/Dashboard.js';
+import Dashboard from './components/views/dashboard/Dashboard';
 import Notas from './components/views/notas/notas';
 import Error404 from './components/views/Error404.js';
 import Footer from './components/layout/footer.js';

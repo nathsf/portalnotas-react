@@ -11,45 +11,45 @@ export default function NotasFilter() {
                     <Form.Group className="mb-3 text-start">
                         <Form.Label className="text-start">Periodo</Form.Label>
                         <Form.Select className="form-select-sm">
-                            <option>Disabled select</option>
+                            <option>2022-01 (pregrado) </option>
                         </Form.Select>
                     </Form.Group>
                 </Col>
                 <Col xs={12} md={4}>
                     <Form.Group className="mb-3 text-start">
-                        <Form.Label className="text-start">Periodo</Form.Label>
+                        <Form.Label className="text-start">Asignatura</Form.Label>
                         <Form.Select className="form-select-sm">
-                            <option>Disabled select</option>
+                            <option>BIOQUIMICA</option>
                         </Form.Select>
                     </Form.Group>
                 </Col>
                 <Col xs={12} md={4}>
                     <Form.Group className="mb-3 text-start">
-                        <Form.Label className="text-start">Periodo</Form.Label>
+                        <Form.Label className="text-start">Grupo</Form.Label>
                         <Form.Select className="form-select-sm">
-                            <option>Disabled select</option>
+                            <option>2022 - MD1</option>
                         </Form.Select>
                     </Form.Group>
                 </Col>
                 <Col xs={12} md={4}>
                     <Form.Group className="mb-3 text-start">
-                        <Form.Label className="text-start">Periodo</Form.Label>
+                        <Form.Label className="text-start">Evaluación</Form.Label>
                         <Form.Select className="form-select-sm">
-                            <option>Disabled select</option>
+                            <option>Seleccionar evaluación</option>
                         </Form.Select>
                     </Form.Group>
                 </Col>
                 <Col xs={12} md={4}>
                     <Form.Group className="mb-3 text-start">
-                        <Form.Label className="text-start">Periodo</Form.Label>
+                        <Form.Label className="text-start">Estado</Form.Label>
                         <Form.Select className="form-select-sm">
-                            <option>Disabled select</option>
+                            <option>Digitalizado</option>
                         </Form.Select>
                     </Form.Group>
                 </Col>
                 <Col xs={12} md={4}>
                     <Form.Group className="mt-4 text-start">
-                        <Button>Buscar</Button>
+                        <Button className="mt-2 px-5 btn btn-sm">Buscar</Button>
                     </Form.Group>
 
                 </Col>

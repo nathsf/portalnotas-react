@@ -29,6 +29,7 @@ export default function Banner() {
                             </Form.Group>
                             
                             <Form.Group className="">
+                              
                             <CustomProvider locale={esES}>
                             <DateRangePicker placeholder="Seleccionar Fecha"  locale={{
                                     sunday: 'Do',

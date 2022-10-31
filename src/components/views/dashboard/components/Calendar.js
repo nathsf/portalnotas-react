@@ -13,7 +13,7 @@ import events from "./Events";
 
 export default function Calendar() {
   return (
-    <div className="Calendar">
+    <div className="Calendar" >
       <FullCalendar
         defaultView="dayGridMonth"
         header={{

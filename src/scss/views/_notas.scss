@@ -12,7 +12,7 @@ table.dataTable.no-footer {
 }
 
 .table-schedule tr:first-child th {
-
+    border-right: 0;
     border-bottom-color: rgba(0, 0, 0, 0.125);
     border-left-color: rgba(0, 0, 0, 0.125);
 }
