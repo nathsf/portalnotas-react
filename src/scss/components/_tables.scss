@@ -186,6 +186,18 @@
 
   font-size: 13px;
 }
+.is_active{
+  .rs-table-cell-content{
+    width: auto !important;
+    height: 22px !important;
+    background: #e8e6ff;
+    margin: 0.5rem;
+    color: blue;
+    padding: 0.1em;
+    border-radius: 17px;
+    line-height: 1.5;
+  }
+}
 
 .rs-table-row-header {
   background-color: #f8f9fa!important;

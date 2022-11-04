@@ -17,7 +17,7 @@ function CarouselBanner() {
                                 </div>
                                 <h6 className='text-start'>Lorem ipsum dolor sit amet, consectetur adipiscing elit</h6>
                                 <div className="container-image">
-                                    <img src={bannerImg} />
+                                    <img src={bannerImg} alt="banner"/>
                                     <div className="middle">
                                         <Button className="btn btn-primary text">Leer más</Button>
                                     </div>

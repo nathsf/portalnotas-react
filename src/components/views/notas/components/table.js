@@ -2,27 +2,33 @@
 import React, { useState } from "react";
 import { Table, Pagination, Checkbox } from 'rsuite';
 import fakeData from "./data.json";
+import { Button } from "rsuite";
+
 const { Column, HeaderCell, Cell } = Table;
+const defaultData = fakeData;
 
 
-const CheckCell = ({ rowData, onChange, checkedKeys, dataKey, ...props }) => (
+const CheckCell = ({ rowData, onChange, onClick, checkedKeys, dataKey, ...props }) => (
     <Cell {...props} style={{ padding: 0 }}>
         <div style={{ lineHeight: '46px' }}>
             <Checkbox
                 value={rowData[dataKey]}
                 inline
                 onChange={onChange}
+                onClick={() => {
+                    onClick(rowData.id);
+                  }}
                 checked={checkedKeys.some(item => item === rowData[dataKey])}
             />
         </div>
-    </Cell>
+   </Cell>
 );
 
 
+
+
 export default function NotasTable() {
-    const [dataTable, setDataTable] = React.useState(
-        fakeData.filter((item, index) => index < 7)
-    );
+   
     const [columns, setColumns] = React.useState([
         { id: "id", name: "#", width: 60 },
         { id: "code", name: "Código", width: 100 },
@@ -33,6 +39,8 @@ export default function NotasTable() {
         { id: "digit", name: "Digitado", width: 150 },
         { id: "isActive", name: "Estado Estudiante", width: 100 }
     ]);
+    console.log(columns);
+    
     const [limit, setLimit] = useState(10);
     const [page, setPage] = useState(1);
 
@@ -41,11 +49,14 @@ export default function NotasTable() {
         setLimit(dataKey);
     };
 
-    const data = fakeData.filter((v, i) => {
+    const data = defaultData.filter((v, i) => { 
         const start = limit * (page - 1);
         const end = start + limit;
         return i >= start && i < end;
+        
     });
+    console.log(data);
+ 
     const [checkedKeys, setCheckedKeys] = React.useState([]);
     let checked = false;
     let indeterminate = false;
@@ -58,7 +69,7 @@ export default function NotasTable() {
         indeterminate = true;
     }
 
-    const handleCheckAll = (value, checked) => {
+    const handleCheckAll = (_value, checked) => {
         const keys = checked ? data.map(item => item.id) : [];
         setCheckedKeys(keys);
     };
@@ -66,9 +77,21 @@ export default function NotasTable() {
         const keys = checked ? [...checkedKeys, value] : checkedKeys.filter(item => item !== value);
         setCheckedKeys(keys);
     };
-
+    const handleChange = (id, key, value) => {
+        const nextData = Object.assign([], data);
+        nextData.find(item => item.id === id)[key] = value;
+        data(nextData);
+      };
+      const handleEditState = id => {
+        const nextData = Object.assign([], data);
+        const activeItem = nextData.find(item => item.id === id);
+        activeItem.status = activeItem.status ? null : 'checked';
+        data(nextData);
+      };
     return (
+        
         <div>
+            
             <Table height={420} data={data} id="table">
             <Column width={50} align="center">
         <HeaderCell style={{ padding: 0 }}>
@@ -83,14 +106,23 @@ export default function NotasTable() {
         </HeaderCell>
         <CheckCell dataKey="id" checkedKeys={checkedKeys} onChange={handleCheck} />
       </Column>
+       
                 {columns.map((column) => (
                     <>
                         
-                        <Column width={column.width} key={column.id} fixed>
+                        <Column width={column.width} key={column.id} fixed >
                             <HeaderCell id={column.id}>{column.name}</HeaderCell>
                             
-                                <Cell dataKey={column.id} />
-                        </Column></>
+                            {column.id === "isActive" ? (
+                                //  <EditableCell dataKey={column.id} onChange={handleChange} />
+                                <Cell dataKey={column.id}   className="is_active"/> 
+                            ) : (
+                                <Cell dataKey={column.id}   /> 
+                                )}
+                            
+                        </Column>
+                        
+                        </>
                 ))}
             </Table>
             <div style={{ padding: 20 }}>
@@ -104,7 +136,7 @@ export default function NotasTable() {
                     maxButtons={5}
                     size="xs"
                     layout={['total', '-', 'limit', '|', 'pager', 'skip']}
-                    total={fakeData.length}
+                    total={defaultData.length}
                     limitOptions={[10, 30, 50]}
                     limit={limit}
                     activePage={page}

@@ -1,6 +1,6 @@
 import React from "react";
 import { Row, Col, Form, Button, ButtonGroup } from 'react-bootstrap';
-
+import ThreePicker from "./threepicker";
 export default function NotasFilter() {
     return (
 
@@ -34,9 +34,8 @@ export default function NotasFilter() {
                 <Col xs={12} md={4}>
                     <Form.Group className="mb-3 text-start">
                         <Form.Label className="text-start">Evaluación</Form.Label>
-                        <Form.Select className="form-select-sm">
-                            <option>Seleccionar evaluación</option>
-                        </Form.Select>
+                        <ThreePicker/>
+                        
                     </Form.Group>
                 </Col>
                 <Col xs={12} md={4}>

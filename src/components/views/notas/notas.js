@@ -5,8 +5,8 @@ import NotasFilter from "./components/notasFilter";
 import {MdPlaylistAddCheck, MdSave} from "react-icons/md";
 import {BsEye, BsPencilSquare} from "react-icons/bs";
 import {FiSave} from "react-icons/fi";
-import FileSVG from "../../svg/fileyellow"
-import ModalAvance from "./components/modalAvance"
+import FileSVG from "../../svg/fileyellow";
+import ModalAvance from "./components/modalAvance";
 import ModalSave from "./components/guardar";
 export default function Notas() {
     return (

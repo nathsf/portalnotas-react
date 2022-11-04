@@ -7,7 +7,7 @@
     "datelimit": "2022-07-28",
     "score": 18,
     "digit": "digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 1,
@@ -17,7 +17,7 @@
     "datelimit": "2022-05-23",
     "score": 16,
     "digit": "digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 2,
@@ -27,7 +27,7 @@
     "datelimit": "2022-08-08",
     "score": 12,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 3,
@@ -37,7 +37,7 @@
     "datelimit": "2022-10-22",
     "score": 14,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 4,
@@ -47,7 +47,7 @@
     "datelimit": "2022-06-21",
     "score": 14,
     "digit": "digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "datelimit": "2022-06-21",
     "score": 13,
     "digit": "digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 6,
@@ -67,7 +67,7 @@
     "datelimit": "2022-03-19",
     "score": 15,
     "digit": "digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 7,
@@ -77,7 +77,7 @@
     "datelimit": "2022-03-08",
     "score": 10,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 8,
@@ -87,7 +87,7 @@
     "datelimit": "2022-07-03",
     "score": 17,
     "digit": "digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 9,
@@ -97,7 +97,7 @@
     "datelimit": "2022-06-04",
     "score": 11,
     "digit": "no digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 10,
@@ -107,7 +107,7 @@
     "datelimit": "2022-09-23",
     "score": 14,
     "digit": "no digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 11,
@@ -117,7 +117,7 @@
     "datelimit": "2022-05-23",
     "score": 15,
     "digit": "digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 12,
@@ -127,7 +127,7 @@
     "datelimit": "2022-09-27",
     "score": 19,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 13,
@@ -137,7 +137,7 @@
     "datelimit": "2022-03-16",
     "score": 16,
     "digit": "no digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 14,
@@ -147,7 +147,7 @@
     "datelimit": "2022-03-26",
     "score": 15,
     "digit": "digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 15,
@@ -157,7 +157,7 @@
     "datelimit": "2022-04-08",
     "score": 14,
     "digit": "digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 16,
@@ -167,7 +167,7 @@
     "datelimit": "2022-03-09",
     "score": 11,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 17,
@@ -177,7 +177,7 @@
     "datelimit": "2022-08-08",
     "score": 12,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 18,
@@ -187,7 +187,7 @@
     "datelimit": "2022-06-27",
     "score": 19,
     "digit": "digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 19,
@@ -197,7 +197,7 @@
     "datelimit": "2022-08-31",
     "score": 16,
     "digit": "digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 20,
@@ -207,7 +207,7 @@
     "datelimit": "2022-09-29",
     "score": 12,
     "digit": "digitado",
-    "isActive": true
+    "isActive": "activo"
   },
   {
     "id": 21,
@@ -217,7 +217,7 @@
     "datelimit": "2022-01-25",
     "score": 17,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 22,
@@ -227,7 +227,7 @@
     "datelimit": "2022-05-26",
     "score": 11,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 23,
@@ -237,7 +237,7 @@
     "datelimit": "2022-10-20",
     "score": 20,
     "digit": "no digitado",
-    "isActive": false
+    "isActive": "retirado"
   },
   {
     "id": 24,
@@ -247,6 +247,6 @@
     "datelimit": "2022-02-08",
     "score": 14,
     "digit": "no digitado",
-    "isActive": true
+    "isActive": "activo"
   }
 ]
