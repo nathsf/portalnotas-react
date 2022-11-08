@@ -20,6 +20,7 @@ import logo from '../../assets/img/logo-blanco.png'
 
 import { RiPencilLine } from "react-icons/ri";
 import { BiChevronsRight, BiChevronsLeft, BiCog } from "react-icons/bi";
+import ArrowSVG from "../svg/arrow"
 import "./header.css";
 
 const SideHeader = () => {
@@ -60,7 +61,7 @@ const SideHeader = () => {
               <img src={menuCollapse ? " " : logo} className="logo-side" />
               <div className="closemenu" onClick={menuIconClick}>
                 {/* changing menu collapse icon on click */}
-                {menuCollapse ? <BiChevronsRight /> : <BiChevronsLeft />}
+                {menuCollapse ? <ArrowSVG /> : <ArrowSVG style={{transform: 'rotate(0.5turn)'}} />}
               </div>
             </div>
 

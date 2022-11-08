@@ -13,7 +13,7 @@ export default function Banner() {
                 <div className="container">
                     <div className="row">
                         <div className="d-flex align-items-center col-sm-12 col-md-6">
-                            <FiUser/>
+                            <FiUser className="me-2"/>
                             <h3 className="mb-0">Bienvenido, 
                                 Hector Cantaro Segura</h3>
                         </div>

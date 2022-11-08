@@ -270,14 +270,17 @@ label.multi-select-menuitem {
     fill: var(--upch-primary);
   }
 }
-.rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-caret, .rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-clean {
-  top: 4px!important;
+.notas {
+  .rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-caret, .rs-picker-default .rs-picker-toggle.rs-btn .rs-picker-toggle-clean {
+    top: 4px!important;
+  }
+  .rs-picker-menu {
+    overflow: unset!important;
+    min-height: 150px!important;
+    height: 250px!important;
+  }
 }
-.rs-picker-menu {
-  overflow: unset!important;
-  min-height: 150px!important;
-  height: 250px!important;
-}
+
 .rs-picker-toggle .rs-picker-toggle-placeholder {
   color: #000000!important;
   font-weight: 400!important;

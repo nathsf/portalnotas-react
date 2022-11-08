@@ -24,8 +24,11 @@
     .config-lang {
         float: right;
         background: #F5F5F5;
-        padding: 0.15rem 0 0.15rem 0.65rem;
+        padding: 0.15rem 0 0.25rem 0.65rem;
         border-radius: 5px;
+        svg {
+            width: 0.9em;
+        }
         .select-lang {
             width: fit-content;
             border: 0;
@@ -38,6 +41,7 @@
             &:focus {   
                 box-shadow: none;
                 outline: none;
+           
         }
         .fa-globe{
             vertical-align: middle;
@@ -53,8 +57,8 @@
             padding: 1rem 2.25rem 1rem;
         }
         img {            
-            height: 43px;
-            width: 32px;
+            height: 37px;
+            width: auto;
         }
         h5 {
             padding-left: 12px;
@@ -94,7 +98,7 @@
         margin: 0 auto;
         p, label {
             line-height: 1.1;
-            font-size: 14px;
+            font-size: 15px;
         }
         label {
             padding-bottom: 5px;
@@ -122,7 +126,7 @@
     }
     
     .carousel-caption {
-        bottom: 3.25rem;
+        bottom: 14vh!important;
         background: rgba(176, 19, 51, 0.57);
         -webkit-backdrop-filter:blur(8px);
         backdrop-filter: blur(8px);

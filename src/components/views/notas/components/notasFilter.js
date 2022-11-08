@@ -48,7 +48,7 @@ export default function NotasFilter() {
                 </Col>
                 <Col xs={12} md={4}>
                     <Form.Group className="mt-4 text-start">
-                        <Button className="mt-2 px-5 btn btn-sm">Buscar</Button>
+                        <Button className="mt-2 px-4 btn btn-sm">Buscar</Button>
                     </Form.Group>
 
                 </Col>

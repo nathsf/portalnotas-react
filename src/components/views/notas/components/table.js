@@ -77,17 +77,17 @@ export default function NotasTable() {
         const keys = checked ? [...checkedKeys, value] : checkedKeys.filter(item => item !== value);
         setCheckedKeys(keys);
     };
-    const handleChange = (id, key, value) => {
-        const nextData = Object.assign([], data);
-        nextData.find(item => item.id === id)[key] = value;
-        data(nextData);
-      };
-      const handleEditState = id => {
-        const nextData = Object.assign([], data);
-        const activeItem = nextData.find(item => item.id === id);
-        activeItem.status = activeItem.status ? null : 'checked';
-        data(nextData);
-      };
+    // const handleChange = (id, key, value) => {
+    //     const nextData = Object.assign([], data);
+    //     nextData.find(item => item.id === id)[key] = value;
+    //     data(nextData);
+    //   };
+    //   const handleEditState = id => {
+    //     const nextData = Object.assign([], data);
+    //     const activeItem = nextData.find(item => item.id === id);
+    //     activeItem.status = activeItem.status ? null : 'checked';
+    //     data(nextData);
+    //   };
     return (
         
         <div>
@@ -125,7 +125,7 @@ export default function NotasTable() {
                         </>
                 ))}
             </Table>
-            <div style={{ padding: 20 }}>
+            <div style={{ padding: 20 }} className="pagination">
                 <Pagination
                     prev
                     next

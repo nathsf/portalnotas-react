@@ -22,8 +22,8 @@
     justify-content: flex-end;
     cursor: pointer;
   }
-  #header .closemenu:hover {
-    color: #FFD500;
+  #header .closemenu:hover svg path{
+    fill: #FFD500;
   }
   #header .pro-sidebar {
     width: 100%;

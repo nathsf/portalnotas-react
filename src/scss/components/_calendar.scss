@@ -237,7 +237,13 @@
     .fc-dayGridMonth-button, .fc-listWeek-button {
       display: none!important;
     }
-
+    .fc-header-toolbar {
+      display: block!important;
+      .fc-toolbar-chunk {
+        display: block!important;
+        margin-bottom: 1rem!important;
+      }
+    }
   }
 
  

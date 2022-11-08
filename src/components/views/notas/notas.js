@@ -1,6 +1,7 @@
 import React from "react";
 import {Container,  Row, Col, Card, Button, ButtonGroup} from 'react-bootstrap';
 import NotasTable from "./components/table";
+import BsTable from "./components/table-bs";
 import NotasFilter from "./components/notasFilter";
 import {MdPlaylistAddCheck, MdSave} from "react-icons/md";
 import {BsEye, BsPencilSquare} from "react-icons/bs";
@@ -11,7 +12,7 @@ import ModalSave from "./components/guardar";
 export default function Notas() {
     return (
         <>
-        <Container className=" pe-0 ">
+        <Container className=" pe-0 notas ">
         <Row>
             <Col  xs={12} md={12} className="pt-4 pb-3">
                 <h4 className="text-uppercase text-start">Registro de Notas</h4>
@@ -20,7 +21,7 @@ export default function Notas() {
         <Row>
             <Col  xs={12} md={12}>
                 <Card>
-                <Card.Header>
+                <Card.Header className="px-4">
                     <Row>
                             <Col xs={12} md={6} className="d-flex justify-content-start py-1">
                             <ButtonGroup size="sm" aria-label="Basic example">
@@ -36,7 +37,7 @@ export default function Notas() {
                             </Col>
                         </Row>
                     </Card.Header>
-                    <Card.Body>
+                    <Card.Body className="p-4">
                         <NotasFilter/>
                     </Card.Body>
                     
@@ -47,7 +48,7 @@ export default function Notas() {
             <Col  xs={12} md={12}>
                 <Card>
                     
-                    <Card.Body>
+                    <Card.Body className="p-4">
                         <Row>
                             <Col xs={12} md={6}>
                             
@@ -85,7 +86,8 @@ export default function Notas() {
                               
                             </Col>
                         </Row>
-                    <NotasTable/>
+                    {/* <NotasTable/> */}
+                    <BsTable/>
                     </Card.Body>
                     
                 </Card>
