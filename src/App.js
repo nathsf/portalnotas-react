@@ -7,19 +7,23 @@ import {
   Route,
   // Switch
 } from "react-router-dom";
-import useToken from './components/login/useToken'
+import { Button } from 'react-bootstrap';
+
+import useToken from './components/auth/useToken'
 
 import SideHeader from './components/layout/sidemenu';
 import NavBar from './components/layout/header';
 import Footer from './components/layout/footer.js';
-// import Main from './components/main.js';
 
 import Dashboard from './components/views/dashboard/Dashboard';
 import Notas from './components/views/notas/notas';
 import Error404 from './components/views/Error404.js';
-import Login from './components/login/login.js';
-import { Button } from 'react-bootstrap';
 
+import Login from './components/auth/login.js';
+import ForgotPassword from './components/auth/forgotPassword.js';
+import Validation from './components/auth/validationCode.js';
+import ChangePassword from './components/auth/changePassword.js';
+import SuccessLogin from './components/auth/success.js';
 
 
 function App() {
@@ -29,7 +33,24 @@ function App() {
   });
 
   if(!token) {
-    return <Login setToken={setToken} />
+    // return <Login setToken={setToken} />
+    return (
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Login setToken={setToken}/>} >
+          </Route>
+          <Route exact path="/forgot-password" element={<ForgotPassword/>} >
+          </Route>
+          <Route exact path="/validation" element={<Validation/>} >
+          </Route>
+          <Route exact path="/change-password" element={<ChangePassword/>} >
+          </Route>
+          <Route exact path="/success" element={<SuccessLogin/>} >
+          </Route>
+          <Route path={'*'} element={<Login setToken={setToken}/>} />
+        </Routes>
+      </Router>
+    )
   }
   
   const logout = () => {

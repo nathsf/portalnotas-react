@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import {
+  Link
+} from "react-router-dom";
 import {Container, Col, Row, Card} from 'react-bootstrap'
-import LoginCarousel from './loginCarousel';
-
-import logo from '../../assets/img/logo.png';
+import LoginCarousel from './components/loginCarousel';
+import HeaderLogin from './components/headerLogin';
+import FooterLogin from './components/footerLogin';
 import captchaImg from '../../assets/img/captcha.png';
-import {BsGlobe} from 'react-icons/bs'
+
+
 async function loginUser(credentials) {
  return fetch('http://localhost:8080/login', {
    method: 'POST',
@@ -37,18 +41,8 @@ export default function Login({ setToken }) {
             <Card>
               <Row>
                 <Col sm={12} md={6} className='form-div px-0'>
-                <div className="login-header d-flex justify-content-between align-items-center">
-                            <div className="d-flex">
-                                <img src={logo}/>
-                            </div>
-                            <div className="config-lang">
-                                <BsGlobe className='text-danger'/>
-                                <select className="form-select form-select-sm select-lang" >
-                                  <option selected>Español</option>
-                                  <option value="1">English</option>
-                                </select>
-                              </div>
-                        </div>
+                <HeaderLogin/>
+              
                         <div className="login-content d-flex align-items-center justify-content-center">
                           
                           <div className="center">
@@ -90,11 +84,11 @@ export default function Login({ setToken }) {
                                       <span className="checkmark"></span>
                                     </label>
                                     <div className="text-center div-captcha">
-                                            <img style={{width: '70%'}} src={captchaImg}/>
+                                            <img style={{width: '70%'}} src={captchaImg} alt="captcha"/>
                                     </div>
                                     <div className="text-center mt-3">
                                       <button type="submit" className="btn btn-send btn-login mb-3" >Ingresar</button>
-                                      <a href="#" className="mt-2 d-block">¿Olvidaste tu contraseña?</a>
+                                      <Link to="/forgot-password" className="mt-2 d-block">¿Olvidaste tu contraseña?</Link>
   
                                     </div>
   
@@ -103,19 +97,13 @@ export default function Login({ setToken }) {
                         </div>
                         
                 </Col>
-                <Col sm={12} md={6} className='d-sm-none d-md-block px-0 carousel-div'>
-                  <LoginCarousel></LoginCarousel>
-                </Col>
+                <LoginCarousel></LoginCarousel>
 
               </Row>
             </Card>
         </Row>
       </Container>
-      <div className="footer fixed ">
-        <div>
-            <p>©2022 Universidad Peruana Cayetano Heredia</p>
-        </div>
-    </div>
+      <FooterLogin/>
    </>
   )
 }
