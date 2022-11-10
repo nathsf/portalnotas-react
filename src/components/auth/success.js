@@ -29,7 +29,7 @@ export default function SuccessLogin() {
                               
                               
                               <div className="text-center mt-5">
-                                <button type="button" className="btn btn-send btn-login mb-3" ><a href="index.html" className="text-white text-decoration-none fs-6 ">Volver a inicio de sesión</a></button>
+                                <button type="button" className="btn btn-send btn-login mb-3" ><Link to="/" className='text-white fs-6 text-decoration-none'>Volver a inicio de sesión</Link></button>
 
                               </div>
                           </div>

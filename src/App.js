@@ -7,12 +7,16 @@ import {
   Route,
   // Switch
 } from "react-router-dom";
-import { Button } from 'react-bootstrap';
+
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import logo from './assets/img/logo.png'
 
 import useToken from './components/auth/useToken'
 
 import SideHeader from './components/layout/sidemenu';
-import NavBar from './components/layout/header';
+// import NavBar from './components/layout/header';
 import Footer from './components/layout/footer.js';
 
 import Dashboard from './components/views/dashboard/Dashboard';
@@ -39,6 +43,8 @@ function App() {
         <Routes>
           <Route exact path="/" element={<Login setToken={setToken}/>} >
           </Route>
+          <Route exact path="/login" element={<Login setToken={setToken}/>} >
+          </Route>
           <Route exact path="/forgot-password" element={<ForgotPassword/>} >
           </Route>
           <Route exact path="/validation" element={<Validation/>} >
@@ -63,8 +69,33 @@ function App() {
        <Router>
                    
       <SideHeader></SideHeader>
-      <NavBar></NavBar>
-      <Button onClickCapture={logout} className="text-end">Cerrar</Button>
+      <Navbar bg="white" variant="ligth">
+      <Container>
+        <Navbar.Brand ><img src={logo} className="logo" alt="logo"/></Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse className="justify-content-end">
+          <Navbar.Text className="text-end fs-6 fw-bold me-2" style={{lineHeight: "1"}}>
+            
+        Hector Cantaro Segura
+
+<br/>
+ <span href="#login" className="small fw-normal">Docente</span>
+          </Navbar.Text>
+          <NavDropdown title="HC" className="dropdown-profile" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">hector.cantaro@upch.pe</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item  onClickCapture={logout}>
+                  Cerrar sesión
+              </NavDropdown.Item>
+              
+            </NavDropdown>
+        </Navbar.Collapse>
+        
+      </Container>
+      
+    </Navbar>
+      {/* <NavBar></NavBar> */}
+      {/* <Button onClickCapture={logout} className="text-end">Cerrar</Button> */}
 
         <div className="main home" >
             <div className="wrapper-height">
