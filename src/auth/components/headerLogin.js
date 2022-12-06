@@ -1,4 +1,4 @@
-import logo from '../../../assets/img/logo.png';
+import logo from '../../assets/img/logo.png';
 import {BsGlobe} from 'react-icons/bs'
 export default function HeaderLogin(){
     return(

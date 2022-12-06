@@ -6,7 +6,7 @@ import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 import Modal from 'react-bootstrap/Modal';
 import {MdSave, MdSecurity, MdSend} from "react-icons/md";
-import SuccessSVG from '../../../svg/success';
+import SuccessSVG from '../../../components/svg/success';
 
 export default function ModalSave(props) {
   const [show, setShow] = useState(false);

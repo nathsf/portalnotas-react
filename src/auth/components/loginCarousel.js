@@ -1,6 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
-import Banner1 from '../../../assets/img/banner-01.png';
-import Banner2 from '../../../assets/img/banner-02.png';
+import Banner1 from '../../assets/img/banner-01.png';
+import Banner2 from '../../assets/img/banner-02.png';
 import {Col} from 'react-bootstrap'
 
 function LoginCarousel() {

@@ -1,12 +1,9 @@
 import React from "react";
 import {Container,  Row, Col, Card, Button, ButtonGroup} from 'react-bootstrap';
-import NotasTable from "./components/table";
 import BsTable from "./components/table-bs";
 import NotasFilter from "./components/notasFilter";
-import {MdPlaylistAddCheck, MdSave} from "react-icons/md";
 import {BsEye, BsPencilSquare} from "react-icons/bs";
-import {FiSave} from "react-icons/fi";
-import FileSVG from "../../svg/fileyellow";
+import FileSVG from "../../components/svg/fileyellow"
 import ModalAvance from "./components/modalAvance";
 import ModalSave from "./components/guardar";
 export default function Notas() {

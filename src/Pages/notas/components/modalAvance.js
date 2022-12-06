@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import {MdPlaylistAddCheck} from "react-icons/md";
 import AvanceTable from './avanceTable';
-import FileSVG from '../../../svg/fileyellow';
+import FileSVG from "../../../components/svg/fileyellow"
 
 export default function ModalAvance(props) {
   const [show, setShow] = useState(false);

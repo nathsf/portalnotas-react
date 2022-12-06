@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import bannerImg from '../../../../assets/img/anuncio-img.png'
+import bannerImg from '../../../assets/img/anuncio-img.png'
 import Button from 'react-bootstrap/Button';
 function CarouselBanner() {
     return (

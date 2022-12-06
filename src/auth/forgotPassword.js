@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import HeaderLogin from './components/headerLogin';
 import LoginCarousel from './components/loginCarousel';
 import FooterLogin from './components/footerLogin';
-import captchaImg from '../../assets/img/captcha.png';
+import captchaImg from '../assets/img/captcha.png';
 
 
 export default function ValidationCode() {

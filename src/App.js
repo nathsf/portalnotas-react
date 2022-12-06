@@ -8,27 +8,29 @@ import {
   // Switch
 } from "react-router-dom";
 
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import logo from './assets/img/logo.png'
 
-import useToken from './components/auth/useToken'
+
+import useToken from './auth/useToken'
 
 import SideHeader from './components/layout/sidemenu';
 // import NavBar from './components/layout/header';
 import Footer from './components/layout/footer.js';
 
-import Dashboard from './components/views/dashboard/Dashboard';
-import Notas from './components/views/notas/notas';
-import Error404 from './components/views/Error404.js';
+import Dashboard from './Pages/dashboard/Dashboard';
+import Notas from './Pages/notas/notas';
+import Error404 from './components/Error404.js';
 
-import Login from './components/auth/login.js';
-import ForgotPassword from './components/auth/forgotPassword.js';
-import Validation from './components/auth/validationCode.js';
-import ChangePassword from './components/auth/changePassword.js';
-import SuccessLogin from './components/auth/success.js';
+import Login from './auth/login.js';
+import ForgotPassword from './auth/forgotPassword.js';
+import Validation from './auth/validationCode.js';
+import ChangePassword from './auth/changePassword.js';
+import SuccessLogin from './auth/success.js';
 
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
+
+import logo from './assets/img/logo.png'
 
 function App() {
   const { token, setToken } = useToken();
@@ -107,11 +109,7 @@ function App() {
                 <Route path="/notas" element={<Notas/>} >
                 </Route>
                 <Route path={'*'} element={<Error404/>} />
-            </Routes>
-
-           
-                      
-                   
+            </Routes>    
             </div>
                     
             <Footer></Footer>
